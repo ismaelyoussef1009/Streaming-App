@@ -253,6 +253,7 @@ const Navbar = () => {
                       <Image
                         width={38}
                         height={39}
+                        // src="/img/bn/profile.jpg"
                         src="/img/bn/profile.jpg"
                         alt="image"
                         className="img-fluid profile__img rounded-circle objec-fit-cover"

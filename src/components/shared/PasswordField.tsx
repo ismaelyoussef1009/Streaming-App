@@ -2,8 +2,15 @@
 import { IconEye, IconEyeOff } from "@tabler/icons-react";
 import { useState } from "react";
 
-const PasswordField = () => {
+const PasswordField = (parent: any) => {
   const [passwordField, setPasswordField] = useState(true);
+  const [password, setPassword] = useState();
+  function sendToParent (e: any) {
+    const { value } = e.target;
+    setPassword(value);
+    parent.sendToParent(password)
+  }
+
   return (
     <div className="cover__grp inputPassword">
       <label
@@ -17,6 +24,8 @@ const PasswordField = () => {
         type={passwordField ? "password" : "text"}
         id="phones"
         placeholder="Type Your Password"
+        value={password}
+        onChange={sendToParent}
       />
       <div className="toggle-icon">
         {passwordField ? (
@@ -26,6 +35,8 @@ const PasswordField = () => {
         )}
       </div>
     </div>
+
+    
   );
 };
 

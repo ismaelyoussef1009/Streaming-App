@@ -59,6 +59,12 @@ export const sideBarData = [
   },
   {
     id: uuidv4(),
+    menuTitle: "My Songs",
+    path: "/mysong",
+    icon: <IconHeadset />,
+  },
+  {
+    id: uuidv4(),
     menuTitle: "Recent",
     className: "d-xl-none",
     icon: <IconClipboardText />,

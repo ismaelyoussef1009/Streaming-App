@@ -1,4 +1,6 @@
 "use client";
+import image6 from "@/../public/img/hotsong/t6.jpg";
+
 import usePlayButtonClick from "@/hooks/usePlayButtonClick";
 import { RootState } from "@/redux/store";
 import Image, { StaticImageData } from "next/image";
@@ -11,7 +13,7 @@ type Props = {
   title: string;
   subTitle: string;
   song: string;
-  link: string;
+  link?: string;
 };
 const MoodsCard = ({ image, title, subTitle, song, link }: Props) => {
   const { handlePlayButtonClick } = usePlayButtonClick();
@@ -26,7 +28,7 @@ const MoodsCard = ({ image, title, subTitle, song, link }: Props) => {
         <Image
           width={200}
           height={200}
-          src={image}
+          src={image6}
           className="w-100 round50 transition overhid h-auto"
           alt="img"
         />

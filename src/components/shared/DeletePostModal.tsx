@@ -11,7 +11,7 @@ const DeletePostModal = () => {
             <h4>Delete Your Post</h4>
           </div>
           <div className="modal-body fs-14 d-block fw-400 text-center bodyfont pra title">
-            Are your sure you wnat to delete this post?
+            Are your sure you what to delete this post?
           </div>
           <div className="modal-footer mt-40 d-flex gap-2 align-items-center justify-content-center">
             <button

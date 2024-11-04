@@ -16,7 +16,7 @@ export const moodsCardData = [
   {
     id: uuidv4(),
     image: image1,
-    title: "Bangla Sing Along",
+    title: "youssef",
     subTitle: "James",
     song: "../audio/audio.mp3",
 
