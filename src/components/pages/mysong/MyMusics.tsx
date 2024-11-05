@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { topSongData } from "@/../public/data/topSongData";
 import SelectBox from "@/components/shared/SelectBox";
 import { IconSearch } from "@tabler/icons-react";
@@ -36,11 +36,10 @@ const MyMusics = () => {
     };
     fetchSongs();
   }, []);
-  console.log(songs);
-  
+
   return (
     <section className="trending__section hotsong__section pr-24 pl-24 pb-100">
-      <div className="trending__selected mb-30 d-flex align-items-center justify-content-lg-between justify-content-center">
+      <div className="trending__selected mb-30 d-flex align-items-center justify-content-end">
         <ul className="nav nav-tabs" id="myTab" role="tablist">
           <li className="nav-item" role="presentation">
             <button
@@ -57,7 +56,13 @@ const MyMusics = () => {
               Songs List
             </button>
           </li>
-         
+          <li className="nav-item">
+            <Link href="/addsong">
+              <button className="nav-link active ml-4" type="button">
+                Add Song
+              </button>
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="container-fluid">
@@ -69,14 +74,15 @@ const MyMusics = () => {
             aria-labelledby="home-tab"
           >
             <div className="row g-4">
-              {songs && songs.map(({ id, ...props }) => (
-                <div
-                  key={id}
-                  className="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-md-4 col-sm-4"
-                >
-                  <MoodsCard key={id} {...props} link="album-allsong" />
-                </div>
-              ))}
+              {songs &&
+                songs.map(({ id, ...props }) => (
+                  <div
+                    key={id}
+                    className="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-md-4 col-sm-4"
+                  >
+                    <MoodsCard key={id} {...props} link="album-allsong" />
+                  </div>
+                ))}
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ const MoodsCard = ({ image, title, subTitle, song, link }: Props) => {
         <Image
           width={200}
           height={200}
-          src={image6}
+          src={image || image6}
           className="w-100 round50 transition overhid h-auto"
           alt="img"
         />
